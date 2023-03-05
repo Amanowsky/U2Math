@@ -1,5 +1,4 @@
-# U2_Calculator
-Calculator in the u2 system
+# U2Math Libary
 Libary to c++ when u can calculate integer binary number in U2
 
 # Requirements
