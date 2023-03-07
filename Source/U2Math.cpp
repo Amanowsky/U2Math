@@ -21,6 +21,8 @@ U2 U2Math::add(U2* firstU2,U2* secondU2)
 	* pêtla tam gdzie jest krótsza u³amkowa
 	* dodajemy i potem insert
 	* (z insertem trzeba uwa¿aæ na ostatnie przesuniêcie!!!)
+	* 
+	* Edit Uciecie bita (pamietaæ Adam)
 	*/
 
 
@@ -60,9 +62,16 @@ double U2Math::toDecimal(U2* u2)
 U2 U2Math::substract(U2* firstU2, U2* secondU2)
 {
 	/*
+	* 1 Sposób 
+	* Wyszukujemy wiêkszej liczby nie zwracaj¹æ uwagi na znak czyli -34 12 porównujemy 34 i 12
+	* odejmujemy wiêksz¹ od mniejszej
+	* pamiêtamy o przesunieciach
+	* wynik bêdzie mia³ znak wiêkszej liczbny tzn (12 - 24 = - 12 a 24 - 12 = - 12 (bo zmienimy znak pamiêtaj¹c ¿e 24 jest ujemne liczbê bêdziemy liczyæ normalnie na 10)
 	* 
-	* 
-	* 
+	* 2. Sposób odejmujemy jak jest
+	* 5 - 15 = - 10 nie zamieniamy
+	* 1 sposób wydajê siê ³atwiejszy poniewa¿
+	* wiêksz¹ siê ³atwiej odejmuje od mniejszej
 	*/
 	U2 u5("232", "21"); //¿eby b³êdu nie by³o to coœ zwracam
 	return u5;
@@ -70,34 +79,54 @@ U2 U2Math::substract(U2* firstU2, U2* secondU2)
 
 U2 U2Math::multiply(U2* firstU2, U2* secondU2)
 {
+	/*
+	Mno¿enie mamy 4 sposoby
+	1. Metoda Zwyk³a
+	2. Metoda Bez rozszerzeñ
+	3. Metoda Bootha
+	4. Metda Bootha - Mcscorlaya
+	Czwarta metoda najmniej chyba liczenia ale warunki typu liczba >1 przesuniêcie dodatkowe bita
 
+	*/
 	
 	U2 u5("232", "21"); //¿eby b³êdu nie by³o to coœ zwracam
 	return u5;
 }
 
+U2 U2Math::divide(U2* firstU2, U2* secondU2)
+{
+	/*
+	Mno¿enie mamy 4 sposoby
+	1. Nieodtwarzaj¹ce
+	2. Odtwarzaj¹ce
+	Robimy nieodtwarzj¹ce 
+
+	*/
+
+	U2 u5("232", "21"); //¿eby b³êdu nie by³o to coœ zwracam
+	return u5;
+}
+
+U2 U2Math::power(U2* firstU2, double exponent) {
+	/*
+		Przerobienie na u³amek zwyk³y (sprawdzenie czy siê skróci 1.64 = 164/100 = 41/25)
+		Dwie pêtle jedna mno¿¹ca liczbê 41 jeden razy
+		druga dziel¹ca 25 razy (potencjalnie mo¿e byæ ³atwiej zrobiæ sprawdziæ)
+		if dla potêgi 0 = 1
+	*/
+}
+
+U2Math::U2 squareRoot(U2* firstU2) {
+	/*
+	* zwyk³e dzielenie tej samej liczby
+	*/
+}
+
+
 bool U2Math::isBigger(U2* firstU2, U2* secondU2)
 {
-	if (firstU2->getIntegerPart()[0] == secondU2->getIntegerPart()[0]) 
-	{
-		if (strlen(firstU2->getIntegerPart()) == strlen(secondU2->getIntegerPart()))
-		{
-			//Nie wiem czy na ten moment jest prawid³owo zastanowimy siê punkt 12
-			//funkcja na dziesietny i porownanie wielkosci liczb
-			//lub porowanie binarnych?
-			//jak na dziesietnych sie nie uda idziemy na ulamkowe
-			//
-		}
-		else if (strlen(firstU2->getIntegerPart()) > strlen(secondU2->getIntegerPart()))
-		{
-			return true;
-		}
-		return false;
-	}
-	else if (firstU2->getIntegerPart()[0] == '0')
-	{
-		return true;
-	}
-
-	return false;
+	/*
+	* Metoda porównuj¹ca dwie liczby zwracaj¹ca prawdê lub fa³sz (nadpisaæ operator w U2 > i < potem funkcja nie potrzebna)
+	* Usunê przy nastêpnym pisaniu kodu ¿eby nie zapomnieæ ¿e coœ mia³em zrobiæ.
+	*/
 }

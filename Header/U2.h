@@ -17,6 +17,8 @@ public:
 	char* getFractionalPart();
 	friend std::ostream& operator<<(std::ostream& os, const U2& u2);
 };
-
+/*
+	nadpisaæ operatory = + - * / < > (i chyba tyle na ten moment)
+*/
 
 #endif
